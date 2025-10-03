@@ -1,5 +1,6 @@
 package org.example.healthcheck.controller;
 
+import org.example.healthcheck.HealthyPage;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,7 +11,7 @@ import java.util.Date;
 public class AppController {
 
     @RequestMapping("/healthcheck")
-    public Date healthCheck() {
-        return new Date();
+    public HealthyPage healthCheck() {
+        return new HealthyPage("Healthy", new Date());
     }
 }
